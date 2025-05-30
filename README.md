@@ -30,7 +30,6 @@ By integrating **Solidity smart contracts**, **React frontend**, and **IPFS stor
 | Layer         | Technology                         |
 |---------------|-------------------------------------|
 | 🌐 Frontend    | React, Tailwind CSS, Vite           |
-| 🔁 Backend     | FastAPI (optional backend layer)    |
 | 🧠 Smart Contract | Solidity, Hardhat                  |
 | 📦 Storage     | IPFS (via Pinata or Web3.Storage)   |
 | 🛠 Tools       | MetaMask, Ethers.js, QR/Barcode Scanner |
