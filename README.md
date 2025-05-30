@@ -35,14 +35,32 @@ By integrating **Solidity smart contracts**, **React frontend**, and **IPFS stor
 | 🛠 Tools       | MetaMask, Ethers.js, QR/Barcode Scanner |
 
 ---
-
 ## 🔄 Workflow
 
-1. 🏷️ Manufacturer uploads product details with a barcode.
-2. 🔗 Data is hashed & stored on IPFS.
-3. 📜 Smart contract registers the hash & barcode on Ethereum.
-4. 📱 User scans product barcode via dApp.
-5. ✅ dApp fetches data from blockchain + IPFS → verifies authenticity.
+1. 🏦 **Manufacturer Registration & Staking**  
+   Manufacturers must register by depositing **0.05 ETH**, which is **staked on the blockchain** as a commitment to authenticity.  
+   - This stake acts as a security deposit.
+   - If a **fraudulent product complaint** is received and verified by the system, the **staked amount will be slashed** (i.e., burned or redistributed).
+
+2. 🏷️ **Product Upload & Metadata Generation**  
+   Registered manufacturers upload product details along with a unique barcode.
+
+3. 🔗 **Decentralized Storage via IPFS**  
+   Product metadata is hashed and stored on **IPFS** ensuring immutability and censorship-resistance.
+
+4. 📜 **Blockchain Registration**  
+   The smart contract stores the barcode and IPFS hash on the Ethereum blockchain, creating a tamper-proof authenticity record.
+
+5. 📱 **Consumer Verification**  
+   Customers scan the product’s barcode using the MetaMark dApp.
+
+6. ✅ **Authenticity Check & Slashing Mechanism**  
+   - If product data matches the on-chain record → product is verified as **genuine**.  
+   - If a customer flags a **fake product**, and the system confirms it → **manufacturer’s deposit is slashed**.
+
+7. 🔁 **Traceability & History**  
+   Ownership and movement history can be traced on-chain, enhancing trust and supply chain transparency.
+
 
 ---
 
