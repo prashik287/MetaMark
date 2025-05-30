@@ -1,5 +1,6 @@
 # Global
 .DS_Store
+.vite/
 *.log
 .env
 *.env
@@ -8,7 +9,7 @@ __pycache__/
 
 
 # Frontend (React + Vite)
-.vite
+
 metamark/node_modules/
 metamark/dist/
 metamark/.env
