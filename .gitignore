@@ -5,9 +5,10 @@
 *.env
 *.pyc
 __pycache__/
-.vite
+
 
 # Frontend (React + Vite)
+.vite
 metamark/node_modules/
 metamark/dist/
 metamark/.env
