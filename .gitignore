@@ -1,0 +1,12 @@
+# Global
+.DS_Store
+*.log
+.env
+*.env
+*.pyc
+__pycache__/
+
+# Frontend (React + Vite)
+metamark/node_modules/
+metamark/dist/
+metamark/.env
