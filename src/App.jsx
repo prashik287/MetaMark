@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Login from './components/dynamic/authentication/Login'
+import {Login,Registration} from './components/dynamic/dynamic'
 // import './App.css'
 import {Navbar} from './components/defaults/default'
+import Home from './components/static/pages/Home'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +16,9 @@ function App() {
       <div className=' w-screen'>
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Login/>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Registration/>}/>
         </Routes>
       </div>
     </div>
