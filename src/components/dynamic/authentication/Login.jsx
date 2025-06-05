@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 
-export default function WalletConnect() {
+export default function Login() {
   const [account, setAccount] = useState(null);
   const dappUrl = "192.168.143.231:3000"; // Change to your actual deployed domain or IP
 
@@ -24,22 +24,21 @@ export default function WalletConnect() {
       alert("MetaMask not detected. Please install it.");
     }
   };
-
+  
   return (
     <div className="h-[150vh] md:h-auto md:min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4">
-      <header className="w-full max-w-sm mb-6 text-center">
+      <header className="w-full max-w-sm mb-6 text-center items-center justify-between">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnhmeXU1N2pkOHI4MzBjb2k1bTJrMGg1NXBmN2FrYW5jOHkzMjNzYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/E6yGVSaVoxIGnEiaEJ/giphy.gif" width="20%" height={80} />
         <h1 className="text-3xl font-bold text-blue-600 mb-2">MetaMark</h1>
-        <p className="text-xl font-semibold text-gray-800">Login to DApp</p>
+        
       </header>
 
-      <div className="bg-white w-full max-w-sm p-6 rounded-2xl text-center">
+      <div className="bg-white md:bg-linear-65 from-blue-500 to-sky-500 w-full max-w-sm p-6 rounded-2xl text-center hover:cursor-pointer" onClick={connectWallet} >
         {!account ? (
-          <button
-            onClick={connectWallet}
-            className="w-full bg-black md:bg-white text-black py-2  rounded-lg border border-gray-300 hover:bg-gray-100 transition"
-          >
+          <p>
             Connect Wallet
-          </button>
+          </p>
+        
         ) : (
           <>
             <p className="text-green-600 font-medium mb-2">Wallet Connected ✅</p>

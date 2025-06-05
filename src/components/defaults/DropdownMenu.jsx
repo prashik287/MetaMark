@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef(null)
@@ -30,13 +30,12 @@ function DropdownMenu() {
           <ul className="py-1 text-gray-800">
             {/* Register with Submenu */}
             <li className="relative group">
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 w-full"
-              >
+              <Link to="/register"                 className="block px-4 py-2 hover:bg-gray-100 w-full"
+>
                 Register
-              </a>
-              <ul className="absolute left-[-86%] top-0 mt-0 ml-1 hidden group-hover:block w-48 bg-white border border-gray-200 rounded-md shadow-lg z-20">
+                </Link>
+            
+              {/* <ul className="absolute left-[-86%] top-0 mt-0 ml-1 hidden group-hover:block w-48 bg-white border border-gray-200 rounded-md shadow-lg z-20">
                 <li>
                   <a
                     href="#"
@@ -53,14 +52,16 @@ function DropdownMenu() {
                     Customer
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </li>
 
             {/* Login */}
-            <li>
-              <a href="#" className="block px-4 py-2 hover:bg-white">
+            <li >
+              {/* <a href="#" className="block px-4 py-2 hover:bg-white"> */}
+              <Link to='/login' className="block px-4 py-2 hover:bg-white">
                 Login
-              </a>
+                </Link>
+              {/* </a> */}
             </li>
           </ul>
         </div>
